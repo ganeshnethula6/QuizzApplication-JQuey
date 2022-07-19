@@ -72,6 +72,7 @@ body {
     height: 75%;
     display: flex;
     flex-direction: row;
+
 }
 
 .qa-block {
@@ -129,11 +130,17 @@ body {
 .qa-num {
     width: 100%;
     height: 70%;
+    display: flex;
+    flex-wrap: wrap;
     border: transparent;
     border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
     margin: 3px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
     background-color: white;
+    align-content: flex-start;
+    justify-content: flex-start;
 }
 
 .nxt-prev {
@@ -204,4 +211,57 @@ body {
 
 .stepper .active:after {
     background-color: #8860d0;
+}
+
+/* Circular Progress Bar */
+.ui-progressbar {
+    position: relative;
+    color: #000;
+}
+
+.progress-label {
+    position: absolute;
+
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgb(194, 106, 106);
+}
+
+
+/*  Question Count */
+
+/* .qa-count {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+} */
+
+.que {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(168, 168, 168);
+    background-color: rgb(215, 215, 215);
+    color: white;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.attemted {
+    background-color: #8860d0;
+    border-color: #fff;
+}
+
+.flag {
+    background-color: yellow;
+    border-color: #fff;
+}
+
+.not-attemted {
+    border: 1px solid rgb(168, 168, 168);
+    background-color: rgb(215, 215, 215);
 }
