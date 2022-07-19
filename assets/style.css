@@ -58,8 +58,10 @@ body {
 }
 
 .analytics {
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 10%;
+    height: 15%;
     background-color: white;
     border: 0.5px solid rgb(199, 197, 197);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -143,4 +145,63 @@ body {
     margin-bottom: 0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
+}
+
+/* Doing the stepper stepper for the level1 and level2 */
+
+.stepper {
+    width: 50%;
+    display: flex;
+}
+
+.stepper li {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 33%;
+    position: relative;
+    text-align: center;
+}
+
+.stepper li:before {
+    content: " ";
+    position: relative;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: white;
+    z-index: 2;
+}
+
+.stepper li:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: 0;
+}
+
+.stepper li:first-child:after {
+    content: none;
+}
+
+.stepper li.active {
+    color: #8860d0;
+}
+
+.stepper .active:before {
+    background-color: #8860d0;
+    border-color: #8860d0;
+}
+
+.stepper .active:after {
+    background-color: #8860d0;
 }
