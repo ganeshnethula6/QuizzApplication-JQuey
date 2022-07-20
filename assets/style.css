@@ -95,6 +95,15 @@ body {
     border-radius: 5px;
 }
 
+.qa-que {
+    margin: 3px 10px 0 20px;
+}
+
+.qa-que p {
+    color: black;
+    font-size: large;
+}
+
 .qa-answer-block {
     width: 100%;
     height: 80%;
