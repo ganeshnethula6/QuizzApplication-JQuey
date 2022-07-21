@@ -275,3 +275,50 @@ body {
     border: 1px solid rgb(168, 168, 168);
     background-color: rgb(215, 215, 215);
 }
+
+/* Adding the check-box type answer */
+.checkbox-type {
+    width: 100%;
+    height: 100%;
+
+}
+
+.ui-controlgroup {
+    margin: 10px;
+    padding: 10px;
+    width: 60%;
+}
+
+.ui-button {
+    background-color: white;
+    background: white;
+    padding: 20px;
+}
+
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+    border: 1px solid #8860d0;
+    background-image: none;
+    background-image: none;
+    background-color: #8860d0;
+}
+
+.ui-icon-background {
+    border: 1px solid #0d0c0c;
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+    background-image: none;
+    width: 20px;
+    height: 20px;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.ui-icon,
+.ui-icon:hover {
+    background-image: none;
+    background-color: white;
+
+}
