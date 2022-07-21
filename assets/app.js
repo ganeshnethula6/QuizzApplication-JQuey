@@ -1,6 +1,11 @@
+let questionNo = 1;
+console.log(questionNo);
+let level = 1;
 function checkBoxOptionsLoad(data) {
-  console.log(typeof data);
-  let dynamicOptions = `<div class="checkbox-type">
+  $("fieldset").empty();
+  let dynamicOptions = `
+                        <legend>Select a Answer: </legend>
+                        <div class="checkbox-type">
                          <label for="option-1">${data.options[0]}</label>
                          <input type="radio" name="option" value="1" id="option-1">
                          <label for="option-2">${data.options[1]}</label>
@@ -18,12 +23,11 @@ function checkBoxOptionsLoad(data) {
   let options = $("input[type='radio']").checkboxradio();
 }
 function loadQuestion(value, questionNUmber) {
-  let question = `${questionNUmber + 1} ${value.question}`;
+  let question = `${questionNUmber}. ${value.question}`;
   $("#question").text(question);
 }
 function loadOptions(data) {
   if (data.type === "checkBox") {
-    console.log(data);
     checkBoxOptionsLoad(data);
   } else if (data.type === "dragDrop") {
   } else if (data.type === "selectable") {
@@ -34,20 +38,64 @@ function loadOptions(data) {
   } else if (data.type === "datePicker") {
   }
 }
-function startQuiz() {
+function startQuiz(questionNo) {
   let data = JSON.parse(localStorage.getItem("data"));
   if (data) {
-    loadQuestion(data[0], 0);
-    loadOptions(data[0]);
+    loadQuestion(data[questionNo - 1], questionNo);
+    loadOptions(data[questionNo - 1]);
   }
 }
 function handleAnswers(e) {
-  // $(".shape")
-  //   .removeClass("circle pill square rectangle")
-  //   .addClass($(e.target).val());
   console.log($(e.target).val());
 }
+function prevQuesion(obj) {
+  questionNo--;
+  if (questionNo == 1) {
+    $(this).prop({
+      disabled: true,
+    });
+  }
+  $("#nxtBtn").text("Next");
+  startQuiz(questionNo);
+}
+function nextQuesion(obj) {
+  if (questionNo >= 1 && questionNo < 8) {
+    questionNo++;
+  }
+  if (questionNo === 1) {
+    $("#prevBtn").prop({
+      disabled: true,
+    });
+    $("#nxtBtn").text("Next");
+  } else if (questionNo === 8) {
+    $("#nxtBtn").text("Submit");
+  } else {
+    $("#prevBtn").prop({
+      disabled: false,
+    });
+    $("#nxtBtn").text("Next");
+  }
+  startQuiz(questionNo);
+}
+
 $(function () {
-  startQuiz();
+  if (questionNo == 1) {
+    $("#prevBtn").prop({
+      disabled: true,
+    });
+    startQuiz(questionNo);
+  } else {
+    $("#prevBtn").prop({
+      disabled: false,
+    });
+  }
+
   $("[name='option']").on("change", handleAnswers);
+  $(".btn").on("click", function (event) {
+    if ($(this).get(0) == $("#prevBtn").get(0)) {
+      prevQuesion($(this));
+    } else {
+      nextQuesion($(this));
+    }
+  });
 });
