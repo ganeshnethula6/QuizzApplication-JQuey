@@ -29,9 +29,9 @@
         </div>
         <div class="analytics">
             <nav class="stepper">
-                <li class="stepper-item active">Level 1</li>
-                <li class="stepper-item">Level 2</li>
-                <li class="stepper-item">Results</li>
+                <li id="levelTab-1" class="stepper-item">Level 1</li>
+                <li id="levelTab-2" class="stepper-item">Level 2</li>
+                <li id="result" class="stepper-item">Results</li>
             </nav>
             <div class="progress-bar">
                 <!-- <div class="progress" id="progress">
@@ -41,33 +41,40 @@
             </div>
         </div>
         <div class="qa-cont">
+
             <div class="qa-block">
+
                 <div class="qa-question">
                     <div class="qa-que">
                         <p id="question"></p>
                     </div>
                 </div>
                 <div class="qa-answer-block" id="qaAnswerBlock">
+                    <div class="error-poup">
+                        p{please choose the option}
+                    </div>
                     <fieldset>
-                        
-
+                        <!-- <legend> Select the Answer</legend>
+                        <div class="sortableBox">
+                            <ul id="sortable">
+                                <li class="ui-state-default">Item 1</li>
+                                <li class="ui-state-default">Item 2</li>
+                                <li class="ui-state-default">Item 3</li>
+                                <li class="ui-state-default">Item 4</li>
+                              </ul>
+                        </div> -->
                     </fieldset>
                 </div>
             </div>
             <div class="qa-table">
                 <div class="qa-count">
-
+                    <span id="level">Level: 1</span>
                 </div>
                 <div class="qa-num">
-                    <div class="que attemted"><span>1</span></div>
-                    <div class="que attemted"><span>2</span></div>
-                    <div class="que flag"><span>3</span></div>
-                    <div class="que not-attemted "><span>4</span></div>
-                    <div class="que not-attemted "><span>5</span></div>
                 </div>
                 <div class="nxt-prev">
-                    <button class="btn"  id="prevBtn">Prev</button>
-                    <button class="btn"  id="nxtBtn">Next</button>
+                    <button class="btn" id="prevBtn">Prev</button>
+                    <button class="btn" id="nxtBtn">Next</button>
                 </div>
 
             </div>
