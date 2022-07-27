@@ -21,7 +21,7 @@
         <div class="navbar">
             <div class="nav-brand">
                 <!-- <img src="#" alt="app-logo" class="nav-img"/> -->
-                <a href="#" class="nav-brand-link">JavaScript Quiz</a>
+                <a href="#" class="nav-brand-link">Quiz App</a>
             </div>
             <ul class="nav">
                 <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
@@ -34,10 +34,8 @@
                 <li id="result" class="stepper-item">Results</li>
             </nav>
             <div class="progress-bar">
-                <!-- <div class="progress" id="progress">
-                        <div id="progressbar"><div class="progress-label">Loading...</div></div>
-                        
-                    </div> -->
+                <p>Attempted Questions</p>
+                <div id="progressbar"><div class="progress-label">0</div></div>
             </div>
         </div>
         <div class="qa-cont">
@@ -50,19 +48,10 @@
                     </div>
                 </div>
                 <div class="qa-answer-block" id="qaAnswerBlock">
-                    <div class="error-poup">
-                        p{please choose the option}
-                    </div>
+                    <div id="errorDialog" class="error-poup" title="Error Popup">
+                        <p>Please select the option</p>
+                      </div>
                     <fieldset>
-                        <!-- <legend> Select the Answer</legend>
-                        <div class="sortableBox">
-                            <ul id="sortable">
-                                <li class="ui-state-default">Item 1</li>
-                                <li class="ui-state-default">Item 2</li>
-                                <li class="ui-state-default">Item 3</li>
-                                <li class="ui-state-default">Item 4</li>
-                              </ul>
-                        </div> -->
                     </fieldset>
                 </div>
             </div>
@@ -79,6 +68,12 @@
 
             </div>
         </div>
+       
+    </div>
+    <div title="Sucessfully Submitted" class="result-modal" id="resultModal">
+            <div  class="result-box" id="resultBox">
+                <span>Your Score is:</span>
+            </div>
     </div>
 </body>
 

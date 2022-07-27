@@ -2,11 +2,12 @@ let data = [
   {
     question: "What is the sum of 5 numbers? 1+2+3+4+5=?",
     options: [13, 14, 15, 20],
-    actualAnswer: "Object Oriented",
+    actualAnswer: "15",
     markedAnswer: "",
     isMarkedTrue: false,
     type: "checkBox",
     level: 1,
+    markedOption: "",
   },
   {
     question: "Place the odd number in the drop box.",
@@ -16,15 +17,17 @@ let data = [
     isMarkedTrue: false,
     type: "dragDrop",
     level: 1,
+    markedOption: "",
   },
   {
     question: "Select the even numbers?",
     options: [1, 2, 3, 4],
-    actualAnswer: "2,3",
+    actualAnswer: "2,4",
     markedAnswer: "",
     isMarkedTrue: false,
     type: "selectable",
     level: 1,
+    markedOption: "",
   },
   {
     question:
@@ -35,6 +38,7 @@ let data = [
     isMarkedTrue: false,
     type: "slider",
     level: 1,
+    markedOption: "",
   },
   {
     question: "Who is the current Prime Minister of India?",
@@ -44,6 +48,7 @@ let data = [
     isMarkedTrue: false,
     type: "selectMenu",
     level: 2,
+    markedOption: "",
   },
   {
     question:
@@ -54,6 +59,7 @@ let data = [
     isMarkedTrue: false,
     type: "spinner",
     level: 2,
+    markedOption: "",
   },
   {
     question: `Rearrange the words such that they are in ascending order?`,
@@ -63,6 +69,7 @@ let data = [
     isMarkedTrue: false,
     type: "sortable",
     level: 2,
+    markedOption: "",
   },
   {
     question: "When is India's Independence Day celebrated?",
@@ -72,6 +79,7 @@ let data = [
     isMarkedTrue: false,
     type: "datePicker",
     level: 2,
+    markedOption: "",
   },
 ];
 let localStorageData;
@@ -80,7 +88,7 @@ function loadData() {
   localStorageData = localStorage.getItem("data");
   if (!localStorageData) {
     localStorage.setItem("data", JSON.stringify(data));
-    console.log("Stored din locals");
+    console.log("Stored in locals");
     return;
   }
 }

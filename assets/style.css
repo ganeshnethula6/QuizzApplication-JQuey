@@ -60,6 +60,7 @@ body {
 .analytics {
     display: flex;
     align-items: center;
+
     width: 100%;
     height: 15%;
     background-color: white;
@@ -170,7 +171,7 @@ body {
 /* Doing the stepper stepper for the level1 and level2 */
 
 .stepper {
-    width: 50%;
+    width: 70%;
     display: flex;
 }
 
@@ -516,6 +517,17 @@ fieldset {
     padding: 5%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 #qaAnswerBlock>fieldset>div>span>a.ui-button {
     width: 20%;
     padding: 0;
@@ -562,4 +574,86 @@ fieldset {
     background: none;
     background-color: #8860d0;
 
+}
+
+#errorDialog {
+    display: none;
+}
+
+.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle {
+    background-color: red;
+}
+
+/* add Progress bar */
+
+.progress-bar {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar p {
+    text-align: center;
+}
+
+#progressbar {
+    display: flex;
+    width: 80%;
+    height: 30%;
+    align-items: center;
+}
+
+.progress-label {
+    margin-left: 50%;
+}
+
+#resultModal {
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1360px;
+    height: 640px;
+}
+
+#resultBox {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+    box-shadow: inset;
+    border: 1px solid #8860d0;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultBox>p {
+    font-size: 100px;
+    font-weight: bold;
+    color: #8860d0;
+}
+
+#resultBox h3 {
+    font-size: xx-large;
+    margin: 0;
+    padding: 0;
+}
+
+body>div:nth-child(4)>div.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle {
+    background-color: #8860d0;
+}
+
+#ui-id-2 {
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+#resultBox > span{
+    font-size: larger;
+    font-weight: 900;
 }
