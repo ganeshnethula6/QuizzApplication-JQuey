@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +8,21 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./assets/data.js"></script>
     <script src="./assets/app.js"></script>
-
 </head>
-
 <body>
     <div class="container">
         <div class="navbar">
             <div class="nav-brand">
+                 <!-- todo upgrade -->
                 <!-- <img src="#" alt="app-logo" class="nav-img"/> -->
                 <a href="#" class="nav-brand-link">Quiz App</a>
             </div>
             <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <!-- todo upgrade -->
+                <!-- <li class="nav-item"><a href="#" class="nav-link">Home</a></li> -->
             </ul>
         </div>
         <div class="analytics">
@@ -35,13 +33,13 @@
             </nav>
             <div class="progress-bar">
                 <p>Attempted Questions</p>
-                <div id="progressbar"><div class="progress-label">0</div></div>
+                <div id="progressbar">
+                    <div class="progress-label">0</div>
+                </div>
             </div>
         </div>
         <div class="qa-cont">
-
             <div class="qa-block">
-
                 <div class="qa-question">
                     <div class="qa-que">
                         <p id="question"></p>
@@ -50,7 +48,7 @@
                 <div class="qa-answer-block" id="qaAnswerBlock">
                     <div id="errorDialog" class="error-poup" title="Error Popup">
                         <p>Please select the option</p>
-                      </div>
+                    </div>
                     <fieldset>
                     </fieldset>
                 </div>
@@ -65,16 +63,12 @@
                     <button class="btn" id="prevBtn">Prev</button>
                     <button class="btn" id="nxtBtn">Next</button>
                 </div>
-
             </div>
         </div>
-       
     </div>
     <div title="Sucessfully Submitted" class="result-modal" id="resultModal">
-            <div  class="result-box" id="resultBox">
-                <span>Your Score is:</span>
-            </div>
+        <div class="result-box" id="resultBox">
+        </div>
     </div>
 </body>
-
 </html>

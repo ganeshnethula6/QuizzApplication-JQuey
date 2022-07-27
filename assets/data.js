@@ -82,13 +82,3 @@ let data = [
     markedOption: "",
   },
 ];
-let localStorageData;
-loadData();
-function loadData() {
-  localStorageData = localStorage.getItem("data");
-  if (!localStorageData) {
-    localStorage.setItem("data", JSON.stringify(data));
-    console.log("Stored in locals");
-    return;
-  }
-}

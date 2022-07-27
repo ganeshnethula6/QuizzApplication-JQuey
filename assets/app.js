@@ -1,5 +1,4 @@
 let questionNo = 1;
-
 let level = 1;
 let quesNo = 1;
 let level1Tab = true;
@@ -8,7 +7,6 @@ let answers = [];
 let marks = 0;
 let progressbar;
 let progressbarCount = 0;
-// let queData = JSON.parse(localStorage.getItem("data"));
 let queData = data;
 function checkBoxOptionsLoad(que) {
   $("fieldset").empty();
@@ -34,6 +32,7 @@ function checkBoxOptionsLoad(que) {
   });
   $("input[type='radio']").checkboxradio();
 }
+
 function loadQuestion(value, questionNo) {
   quesNo = questionNo <= 4 ? questionNo : questionNo - 4;
   let question = `${quesNo}. ${value.question}`;
@@ -125,6 +124,7 @@ function selectableOptionsLoad(que) {
     },
   });
 }
+
 function sliderOptionsLoad(que) {
   var dynamicOptions = `
                           <legend> Drag the Slider</legend>
@@ -166,6 +166,7 @@ function sliderOptionsLoad(que) {
   }
   $("#amount").val($("#slider-range-min").slider("value"));
 }
+
 function selectMenuOptionsLoad(que) {
   var dynamicOptions = `                   
     <legend> Select the Answer</legend>
@@ -200,6 +201,7 @@ function selectMenuOptionsLoad(que) {
     },
   });
 }
+
 function spinnerOptionsLoad(que) {
   var dynamicOptions = `<legend> Select the Answer Or Use arrows</legend>
   <div class="spinnerBox">
@@ -225,6 +227,7 @@ function spinnerOptionsLoad(que) {
     $("#spinner").val(data[questionNo - 1].markedAnswer);
   }
 }
+
 function sortableOptionsLoad(que) {
   var dynamicOptions = ``;
   if (data[questionNo - 1].isMarkedTrue) {
@@ -266,6 +269,7 @@ function sortableOptionsLoad(que) {
   });
   $("#sortable").disableSelection();
 }
+
 function datePickerOptionsLoad(que) {
   var dynamicOptions = `    <legend> Select the Answer</legend>
                             <div class="datePickerBox">
@@ -293,6 +297,7 @@ function datePickerOptionsLoad(que) {
     },
   });
 }
+
 function loadOptions(que) {
   if (que.type === "checkBox") {
     checkBoxOptionsLoad(que);
@@ -312,6 +317,7 @@ function loadOptions(que) {
     datePickerOptionsLoad();
   }
 }
+
 function startQuiz(questionNo) {
   if (queData) {
     loadQuestion(queData[questionNo - 1], questionNo);
@@ -336,6 +342,7 @@ function startQuiz(questionNo) {
     }
   }
 }
+
 function handleRadioBoxAnswer(e) {
   data[questionNo - 1].markedAnswer = $(e.target).val();
   if (!data[questionNo - 1].isMarkedTrue) {
@@ -345,6 +352,7 @@ function handleRadioBoxAnswer(e) {
   data[questionNo - 1].isMarkedTrue = true;
   data[questionNo - 1].markedOption = "#" + $(e.target).attr("id");
 }
+
 function prevQuesion(obj) {
   if (questionNo == 1) {
     obj.prop({
@@ -451,6 +459,7 @@ function loadTabQuestions(level) {
   });
   $(".qa-num").append(dynamic);
 }
+
 function changeQuestionsStatus(level, quesNo) {
   $(`#tabQue${questionNo}`).addClass("attemted");
 }

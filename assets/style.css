@@ -271,16 +271,6 @@ body {
     border-color: #fff;
 }
 
-.flag {
-    background-color: yellow;
-    border-color: #fff;
-}
-
-.not-attemted {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(215, 215, 215);
-}
-
 /* Adding the check-box type answer */
 .checkbox-type {
     width: 100%;
@@ -387,8 +377,6 @@ fieldset {
     margin: 3px;
 }
 
-
-
 .drag-options span {
     font-size: larger;
     font-weight: 700;
@@ -424,7 +412,6 @@ fieldset {
     margin: 3px;
     border: 1px solid rgb(205, 204, 204);
     border-radius: 5px;
-
 }
 
 /* .selectable-option span {} */
@@ -445,14 +432,6 @@ fieldset {
     height: 100%;
     width: 50%;
 }
-
-/* #selectable li {
-    margin: 3px;
-    padding: 0.4em;
-    font-size: 1.4em;
-    height: 18px;
-} */
-
 
 /* adding date picker */
 
@@ -653,7 +632,8 @@ body>div:nth-child(4)>div.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-h
     color: white;
     font-size: xx-large;
 }
-#resultBox > span{
+
+#resultBox>span {
     font-size: larger;
     font-weight: 900;
 }
